@@ -1,0 +1,13 @@
+#!/bin/sh
+if [ $1x=='x' ];then
+    loop=2
+else
+    loop=$1
+fi
+
+split="#-------------------------#"
+for  dir  in  $( ls )
+do
+    [ -d $dir ] && echo $split && echo "    " $dir
+    [ -d $dir ] && cd $dir && sh run $loop && cd ..
+done 

@@ -1,0 +1,35 @@
+git add xxx
+git commit -m "xxx is ???"
+git push
+
+git status
+git config -global credential.helper store 
+（解决需要多次重复填写用户名和密码的问题）
+
+git log
+git checkout -b xxx 
+（创建一个叫xxx的分支，并切换到该分支上）
+git branch
+（查看所有已创建分支）
+git checkout master
+（切换回master分支）
+git merge xxx
+（将xxx和master合并）
+git branch -d xxx
+（删除xxx分支）
+
+git reset --hard HEAD^
+（版本回退一步）
+git reset --hard 33fsdfsg（提交的id，可在log中查看）
+（版本回退到指定id版本）
+git checkout -- xxx 
+（放弃目前项目，未进行git add）
+git reset HEAD xxx
+（丢弃缓冲区项目，已进行git add）
+
+git push -f origin master
+（强制覆盖远端，原本的远端变为branc）
+git reflog
+（查看每次提交记录）
+
+

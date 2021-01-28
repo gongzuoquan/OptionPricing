@@ -1,0 +1,21 @@
+#!/bin/sh
+if [ $1x == x ];then
+    loop=2
+else
+    loop=$1
+fi
+
+echo $loop
+
+split="#-------------------------#"
+for  dir  in  $( ls )
+do
+    if [ $dir == "backup" ];then
+        continue
+    fi
+    if [ -d $dir ];then
+        echo $dir
+        echo $split && echo "    " $dir
+        cd $dir && sh run $loop && cd ..
+    fi
+done 

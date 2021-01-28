@@ -1,0 +1,196 @@
+pgc++ -c -acc -Minfo -std=c++11 main.cpp -I ~/workspace/NLPwork/eigen
+"/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/arch/AVX/PacketMath.h",
+          line 332: warning: statement is unreachable
+    __m256d swap_halves = _mm256_permute2f128_pd(a,a,1);
+                          ^
+
+"/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/util/Memory.h", line 278:
+          warning: statement is unreachable
+    return NULL;
+    ^
+          detected during:
+            instantiation of "T
+                      *Eigen::internal::conditional_aligned_new_auto<T,Align>(s
+                      ize_t) [with T=double, Align=true]" at line 403 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Dens
+                      eStorage.h"
+            instantiation of "void Eigen::DenseStorage<T, -1, -1, -1,
+                      _Options>::resize(Eigen::Index, Eigen::Index,
+                      Eigen::Index) [with T=double, _Options=0]" at line 287 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Plai
+                      nObjectBase.h"
+            instantiation of "void
+                      Eigen::PlainObjectBase<Derived>::resize(Eigen::Index,
+                      Eigen::Index) [with Derived=Eigen::Matrix<double, -1, -1,
+                      0, -1, -1>]" at line 802 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Assi
+                      gnEvaluator.h"
+            instantiation of "void
+                      Eigen::internal::call_assignment_no_alias(Dst &, const
+                      Src &, const Func &) [with Dst=Eigen::Matrix<double, -1,
+                      -1, 0, -1, -1>, Src=Eigen::Map<Eigen::MatrixXd, 0,
+                      Eigen::Stride<0, 0>>,
+                      Func=Eigen::internal::assign_op<double, double>]" at line
+                      721 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Plai
+                      nObjectBase.h"
+            instantiation of "Derived
+                      &Eigen::PlainObjectBase<Derived>::_set_noalias(const
+                      Eigen::DenseBase<OtherDerived> &) [with
+                      Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>,
+                      OtherDerived=Eigen::Map<Eigen::MatrixXd, 0,
+                      Eigen::Stride<0, 0>>]" at line 804 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Plai
+                      nObjectBase.h"
+            instantiation of "void
+                      Eigen::PlainObjectBase<Derived>::_init1<T,OtherDerived>(c
+                      onst Eigen::DenseBase<OtherDerived> &) [with
+                      Derived=Eigen::Matrix<double, -1, -1, 0, -1, -1>,
+                      T=Eigen::Map<Eigen::MatrixXd, 0, Eigen::Stride<0, 0>>,
+                      OtherDerived=Eigen::Map<Eigen::MatrixXd, 0,
+                      Eigen::Stride<0, 0>>]" at line 296 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Matr
+                      ix.h"
+            instantiation of "Eigen::Matrix<_Scalar, _Rows, _Cols, _Options,
+                      _MaxRows, _MaxCols>::Matrix(const T &) [with
+                      _Scalar=double, _Rows=-1, _Cols=-1, _Options=0,
+                      _MaxRows=-1, _MaxCols=-1, T=Eigen::Map<Eigen::MatrixXd,
+                      0, Eigen::Stride<0, 0>>]" at line 406 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/Core/Dens
+                      eBase.h"
+            instantiation of "Eigen::DenseBase<Derived>::EvalReturnType
+                      Eigen::DenseBase<Derived>::eval() const [with
+                      Derived=Eigen::Map<Eigen::MatrixXd, 0, Eigen::Stride<0,
+                      0>>]" at line 648 of
+                      "/home/zqgong/workspace/NLPwork/eigen/Eigen/src/QR/ColPiv
+                      HouseholderQR.h"
+            instantiation of "const
+                      Eigen::ColPivHouseholderQR<Eigen::MatrixBase<Derived>::Pl
+                      ainObject>
+                      Eigen::MatrixBase<Derived>::colPivHouseholderQr() const
+                      [with Derived=Eigen::Map<Eigen::MatrixXd, 0,
+                      Eigen::Stride<0, 0>>]" at line 265 of "util.hpp"
+
+gaussianPolarMethod():
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                    71, FMA (fused multiply-add) instruction(s) generated
+gaussianPolarMethod2():
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                   104, FMA (fused multiply-add) instruction(s) generated
+MoroInvCND(double):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                   154, FMA (fused multiply-add) instruction(s) generated
+test_option(int, int):
+     87, FMA (fused multiply-add) instruction(s) generated
+LeastSquareEigen::get_Y(double):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                   285, FMA (fused multiply-add) instruction(s) generated
+Option::asset_EulerMaruyama_method(const double &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                    87, FMA (fused multiply-add) instruction(s) generated
+Option::BS_return(const bool &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                   165, FMA (fused multiply-add) instruction(s) generated
+Option::compute_error(const double *, int):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+              176, FMA (fused multiply-add) instruction(s) generated
+Option::show_fdm_all(double *, int, int):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+              239, FMA (fused multiply-add) instruction(s) generated
+Option::FDM_pricing(const int &, const int &, double, double, const bool &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+              287, Memory zero idiom, loop replaced by call to __c_mzero8
+              313, Memory zero idiom, loop replaced by call to __c_mzero8
+              320, FMA (fused multiply-add) instruction(s) generated
+AmericanOption::MC_pricing(const int &, const int &, const bool &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+              845, Memory set idiom, loop replaced by call to __c_mset4
+              899, FMA (fused multiply-add) instruction(s) generated
+Eigen::internal::general_matrix_vector_product<long, double, Eigen::internal::const_blas_data_mapper<double, long, (int)1>, (int)1, (bool)0, double, Eigen::internal::const_blas_data_mapper<double, long, (int)0>, (bool)0, (int)0>::run(long, long, const Eigen::internal::const_blas_data_mapper<double, long, (int)1> &, const Eigen::internal::const_blas_data_mapper<double, long, (int)0> &, double *, long, double):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             443, include "GeneralMatrixVector.h"
+                                  573, FMA (fused multiply-add) instruction(s) generated
+Eigen::internal::triangular_matrix_vector_product<long, (int)6, double, (bool)0, double, (bool)0, (int)1, (int)0>::run(long, long, const double *, long, const double *, long, double *, long, const double &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             451, include "TriangularMatrixVector.h"
+                                  128, FMA (fused multiply-add) instruction(s) generated
+Eigen::internal::general_matrix_vector_product<long, double, Eigen::internal::const_blas_data_mapper<double, long, (int)1>, (int)1, (bool)0, double, Eigen::internal::const_blas_data_mapper<double, long, (int)1>, (bool)0, (int)1>::run(long, long, const Eigen::internal::const_blas_data_mapper<double, long, (int)1> &, const Eigen::internal::const_blas_data_mapper<double, long, (int)1> &, double *, long, double):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             443, include "GeneralMatrixVector.h"
+                                  573, FMA (fused multiply-add) instruction(s) generated
+                             451, include "TriangularMatrixVector.h"
+Eigen::internal::general_matrix_vector_product<long, double, Eigen::internal::const_blas_data_mapper<double, long, (int)1>, (int)1, (bool)0, double, Eigen::internal::const_blas_data_mapper<double, long, (int)1>, (bool)0, (int)0>::run(long, long, const Eigen::internal::const_blas_data_mapper<double, long, (int)1> &, const Eigen::internal::const_blas_data_mapper<double, long, (int)1> &, double *, long, double):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             443, include "GeneralMatrixVector.h"
+                                  573, FMA (fused multiply-add) instruction(s) generated
+                             451, include "TriangularMatrixVector.h"
+Eigen::internal::gebp_kernel<double, double, long, Eigen::internal::blas_data_mapper<double, long, (int)0, (int)0>, (int)12, (int)4, (bool)0, (bool)0>::operator ()(const Eigen::internal::blas_data_mapper<double, long, (int)0, (int)0> &, const double *, const double *, long, long, long, double, long, long, long, long):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             440, include "GeneralBlockPanelKernel.h"
+                                  927, FMA (fused multiply-add) instruction(s) generated
+                                  964, Loop invariant if not transformed: pragma
+                                 1014, Loop invariant if not transformed: pragma
+                                 1092, Loop invariant if not transformed: pragma
+                                 1126, Loop invariant if not transformed: pragma
+                                 1195, Loop invariant if not transformed: pragma
+                                 1235, Loop invariant if not transformed: pragma
+                                 1296, Loop invariant if not transformed: pragma
+                                 1329, Loop invariant if not transformed: pragma
+                                 1387, Loop invariant if not transformed: pragma
+                                 1422, Loop invariant if not transformed: pragma
+                                 1466, Loop invariant if not transformed: pragma
+                                 1497, Loop invariant if not transformed: pragma
+Eigen::internal::triangular_solve_matrix<double, long, (int)1, (int)2, (bool)0, (int)0, (int)0>::run(long, long, const double *, long, double *, long, Eigen::internal::level3_blocking<double, double> &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             453, include "TriangularSolverMatrix.h"
+                                   89, FMA (fused multiply-add) instruction(s) generated
+Eigen::internal::queryCacheSizes_intel_direct(int &, int &, int &):
+      3, include "tree.hpp"
+           3, include "option.hpp"
+                4, include "util.hpp"
+                     5, include "Dense"
+                          1, include "Core"
+                             327, include "Memory.h"
+                                  791, Loop invariant if not transformed: pragma
+                             440, include "GeneralBlockPanelKernel.h"
+pgc++ -o execute main.o -Minfo

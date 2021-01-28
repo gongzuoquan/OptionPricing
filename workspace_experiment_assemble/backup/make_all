@@ -1,0 +1,7 @@
+#!/bin/sh
+split="#-------------------------#"
+for  dir  in  $( ls )
+do
+    [ -d $dir ] && echo $split && echo "    " $dir
+    [ -d $dir ] && cd $dir && make clean && make && cd ..
+done 

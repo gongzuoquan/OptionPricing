@@ -1,0 +1,7 @@
+#!/bin/sh
+# 用于将一个文件广播到所有子文件夹（workspace）中
+file=$1
+for  dir  in  $( ls )
+do
+    [ -d $dir ] && cp $file $dir
+done       

@@ -1,0 +1,11 @@
+S0=44
+K=40
+T=2.0
+V=0.4
+R=0.06
+sim_num=100000
+time_step=50
+rho=0.5
+kappa=0
+theta=0
+epslon=0

@@ -1,0 +1,17 @@
+nohup: ignoring input
+S0  44
+K  40
+T  2
+R  0.06
+V  0.4
+sim_num  100000
+time_step  50
+
+option initialization
+AmericanOption initialization
+S0: 44
+K: 40
+V: 0.4
+R: 0.06
+T: 2
+定价结果：5.61457
